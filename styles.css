@@ -5,11 +5,10 @@
   margin: auto;
 }
 
-body,
-html {
+body {
   width: 100%;
   height: 100vh;
-  margin: 0;
+  margin: auto;
   padding: 0;
   background-color: azure;
   font-family: "Montserrat", sans-serif;
@@ -19,13 +18,16 @@ html {
 .mainContainer {
   display: flex;
   align-items: center;
-  width: 50%;
-  height: 100%;
+  justify-content: center;
+  width: 80%;
+  background-color: yellow;
 }
 
 .containerOne {
-  width: 40%;
-  height: 65%;
+  width: 50%;
+  margin: 15%;
+  margin-top: 65px;
+  margin-bottom: 55px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -33,7 +35,13 @@ html {
   align-items: center;
   background-color: rgb(51, 51, 255);
   border-radius: 25px;
-  padding-top: 45px;
+  padding: 5%;
+
+  /* Adjustments for responsiveness */
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 0; /* Remove bottom margin */
+  }
 }
 
 .containerOne .headingOne {
@@ -41,6 +49,7 @@ html {
   font-size: 1.3em;
   font-weight: 500;
   letter-spacing: 1.2px;
+  margin-top: 2%;
 }
 
 .headingOne {
@@ -52,13 +61,14 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 45%;
+  max-width: 200px;
   border-radius: 50%;
   color: #fff;
   background-color: #3333cc;
   position: relative;
-  top: -60px;
+  margin-top: 4%;
 }
 
 .circle span {
@@ -78,7 +88,6 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
 }
 
 .textWrapper {
@@ -87,35 +96,51 @@ html {
   flex-direction: column;
   color: #fff;
   letter-spacing: 0.1rem;
-  padding-bottom: 186px;
-  padding-top: 40px;
+  margin-top: 10%;
+  margin-bottom: 4%;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 2%;
+  }
 }
 
 .footer h1 {
   color: #fff;
   font-weight: bold;
   font-size: 2rem;
+  margin-bottom: 1%;
 }
 
 .textWrapper span {
   margin-top: 10px;
+  text-align: center;
 }
 
 .containerTwo {
   background-color: azure;
-  height: 60%;
+  margin-right: 100px;
   flex: 1;
-
+  width: 50%;
+  height: 75%;
   position: relative;
   box-shadow: 17px 4px 31px -7px rgba(0, 0, 0, 0.53);
   -webkit-box-shadow: 17px 4px 31px -7px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 17px 4px 31px -7px rgba(0, 0, 0, 0.53);
+  border-radius: 40px;
+
+  /* Adjustments for responsiveness */
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-top: 0; /* Remove top margin */
+  }
 }
 
 .containerTwo h1 {
   position: absolute;
   left: 20px;
   top: 20px;
+  margin-bottom: 4%;
 }
 
 .bannerContainer {
@@ -123,131 +148,124 @@ html {
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 33px;
+  gap: 45px;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 35%;
+  margin-bottom: 20%;
+
+  @media (max-width: 768px) {
+    margin-top: 6%;
+  }
 }
 
-.BannerOne {
-  border: 1px solid transparent;
-  border-radius: 15px;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  width: 350px;
-  height: 50px;
-  background-color: rgb(248, 229, 232);
-}
-.BannerTwo {
-  border: 1px solid transparent;
-  border-radius: 15px;
-  font-weight: bold;
-
-  text-align: center;
-  position: relative;
-
-  width: 350px;
-  height: 50px;
-  background-color: rgb(242, 247, 188);
-}
-.BannerThree {
-  border: 1px solid transparent;
-  border-radius: 15px;
-  font-weight: bold;
-
-  text-align: center;
-  position: relative;
-
-  width: 350px;
-  height: 50px;
-  background-color: rgb(231, 251, 231);
-}
+.BannerOne,
+.BannerTwo,
+.BannerThree,
 .BannerFour {
   border: 1px solid transparent;
   border-radius: 15px;
   font-weight: bold;
-
   text-align: center;
   position: relative;
-
-  width: 350px;
+  width: 80%;
+  max-width: 350px;
   height: 50px;
+}
+.BannerOne:hover,
+.BannerTwo:hover,
+.BannerThree:hover,
+.BannerFour:hover,
+button:hover {
+  cursor: pointer;
+}
+.BannerOne {
+  background-color: rgb(248, 229, 232);
+}
+.BannerTwo {
+  background-color: rgb(242, 247, 188);
+}
+.BannerThree {
+  background-color: rgb(231, 251, 231);
+}
+.BannerFour {
   background-color: rgb(235, 242, 255);
 }
-.BannerOne h4 {
-  position: absolute;
-  left: 50px;
-  bottom: 15px;
-  color: rgb(246, 129, 149);
-}
-.BannerOne span {
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-}
-.BannerTwo h4 {
-  position: absolute;
-  left: 50px;
-  bottom: 15px;
-  color: orange;
-}
-.BannerTwo span {
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-}
-.BannerThree h4 {
-  position: absolute;
-  left: 50px;
-  bottom: 15px;
-  color: rgb(3, 171, 146);
-}
-.BannerThree span {
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-}
+
+.BannerOne h4,
+.BannerTwo h4,
+.BannerThree h4,
 .BannerFour h4 {
   position: absolute;
   left: 50px;
   bottom: 15px;
-  color: rgb(4, 4, 249);
 }
+
+.BannerOne span,
+.BannerTwo span,
+.BannerThree span,
 .BannerFour span {
   position: absolute;
   right: 20px;
   bottom: 15px;
 }
-.BannerOne img {
-  position: absolute;
-  left: 14px;
-  bottom: 15px;
-}
-.BannerTwo img {
-  position: absolute;
-  left: 14px;
-  bottom: 15px;
-}
-.BannerThree img {
-  position: absolute;
-  left: 14px;
-  bottom: 15px;
-}
+
+.BannerOne img,
+.BannerTwo img,
+.BannerThree img,
 .BannerFour img {
   position: absolute;
   left: 14px;
   bottom: 15px;
 }
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
 .buttonContainer button {
-  width: 300px;
-  height: 40px;
-  border-radius: 20px;
+  width: 80%;
+  height: 50px;
+  border-radius: 50px;
   border: none;
   background-color: #000;
   color: #fff;
+  font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 0.1em;
+
+  padding: 0;
+  margin: 0;
 }
+
 .buttonContainer button::after {
   outline: none;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 50px;
+  right: 40%;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .containerOne,
+  .containerTwo {
+    width: 100%;
+  }
+
+  .containerTwo {
+    margin-top: 50px;
+  }
 }
