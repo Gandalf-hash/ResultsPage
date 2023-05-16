@@ -5,29 +5,33 @@
   margin: auto;
 }
 
+html,
 body {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   padding: 0;
   background-color: azure;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
 }
 
 .mainContainer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 80%;
-  background-color: yellow;
 }
 
 .containerOne {
   width: 50%;
-  margin: 15%;
-  margin-top: 65px;
-  margin-bottom: 55px;
+  min-height: 750px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -62,7 +66,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 45%;
+  height: 24vh;
   max-width: 200px;
   border-radius: 50%;
   color: #fff;
@@ -119,20 +123,21 @@ body {
 
 .containerTwo {
   background-color: azure;
-  margin-right: 100px;
   flex: 1;
-  width: 50%;
-  height: 75%;
+  width: 35%;
+  min-height: 84vh;
   position: relative;
   box-shadow: 17px 4px 31px -7px rgba(0, 0, 0, 0.53);
   -webkit-box-shadow: 17px 4px 31px -7px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 17px 4px 31px -7px rgba(0, 0, 0, 0.53);
   border-radius: 40px;
+  margin-top: 65px;
+  margin-right: 35px;
 
   /* Adjustments for responsiveness */
   @media (max-width: 768px) {
     width: 80%;
-    margin-top: 0; /* Remove top margin */
+    margin-top: 20px; /* Remove top margin */
   }
 }
 
@@ -145,16 +150,16 @@ body {
 
 .bannerContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 45px;
   align-items: center;
-  margin-top: 35%;
-  margin-bottom: 20%;
+  margin-top: 140px;
+  margin-right: 40px;
 
   @media (max-width: 768px) {
-    margin-top: 6%;
+    margin-top: 0;
   }
 }
 
@@ -169,7 +174,7 @@ body {
   position: relative;
   width: 80%;
   max-width: 350px;
-  height: 50px;
+  height: 66px;
 }
 .BannerOne:hover,
 .BannerTwo:hover,
@@ -199,6 +204,18 @@ button:hover {
   left: 50px;
   bottom: 15px;
 }
+.BannerOne h4 {
+  color: rgb(250, 106, 130);
+}
+.BannerTwo h4 {
+  color: orange;
+}
+.BannerThree h4 {
+  color: rgb(41, 243, 182);
+}
+.BannerFour h4 {
+  color: rgb(47, 12, 245);
+}
 
 .BannerOne span,
 .BannerTwo span,
@@ -224,12 +241,11 @@ button:hover {
   justify-content: center;
   width: 100%;
   height: auto;
-  margin-top: 0;
 }
 
 .buttonContainer button {
   width: 80%;
-  height: 50px;
+  height: 76px;
   border-radius: 50px;
   border: none;
   background-color: #000;
@@ -263,6 +279,22 @@ button:hover {
   .containerOne,
   .containerTwo {
     width: 100%;
+  }
+
+  .containerTwo {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .containerOne,
+  .containerTwo {
+    width: 80%;
+    margin: 0 auto;
   }
 
   .containerTwo {
